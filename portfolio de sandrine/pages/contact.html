@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio BTS SIO</title>
     <link rel="stylesheet" href="../Style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -139,53 +141,129 @@
     </style>
 </head>
 <body>
-    <nav class="sidebar">
+    <nav class="sidebar" id="sidebar">
+        <button id="toggleSidebar" class="toggle-btn">☰</button>
+      
         <div class="user-info">
-            <h3>Amélé Sandrine</h3>
-            <div class="datetime" id="datetime"></div>
+          <h3>Amélé Sandrine</h3>
+          <div class="datetime" id="datetime"></div>
         </div>
-        <button class="toggle-btn">
-            <i class="fas fa-chevron-left"></i>
-        </button>
+      
         <a href="accueil.html" class="menu-item">
-            <i class="fas fa-home"></i>
-            <span class="menu-text">Accueil</span>
+          <i class='bx bx-home'></i>
+          <span class="link-text">Accueil</span>
         </a>
-        <a href="Profil.html" class="menu-item">
-            <i class="fas fa-user"></i>
-            <span class="menu-text">Profil</span>
+      
+        <div class="menu-item has-submenu">
+          <i class='bx bx-folder'></i>
+          <span class="link-text">Épreuves</span>
+        </div>
+      
+        <a href="parcours.html" class="menu-item">
+          <i class='bx bx-user'></i>
+          <span class="link-text">Parcours</span>
         </a>
-       
-        <a href="stage" class="menu-item">
-            <i class="fas fa-briefcase"></i>
-            <span class="menu-text">Stages</span>
-        </a>
-        <a href="competances.html" class="menu-item">
-            <i class="fas fa-laptop-code"></i>
-            <span class="menu-text">Compétences</span>
-        </a>
-        <a href="projets.html" class="menu-item">
-            <i class="fas fa-code"></i>
-            <span class="menu-text">Projets</span>
-        </a>
-        <a href="btssio.html" class="menu-item">
-            <i class="fas fa-award"></i>
-            <span class="menu-text">BTS SIO</span>
-        </a>
-        <a href="epreuves.html" class="menu-item">
-            <i class="fas fa-tasks"></i>
-            <span class="menu-text">Épreuves</span>
-        </a>
+      
         <a href="contact.html" class="menu-item">
-            <i class="fas fa-envelope"></i>
-            <span class="menu-text">Contact</span>
+          <i class='bx bx-id-card'></i>
+          <span class="link-text">Contact</span>
         </a>
+      </nav>
+      
+    
+      <!-- Ton contenu principal -->
+      <div class="main-content">
+        <h1>Bienvenue</h1>
+        <p>Contenu ici...</p>
+      </div>
+    
     </nav>
+    
+           
+        
 
-    <main>
-        <h1>Mon Portfolio BTS SIO</h1>
-        <!-- Votre contenu ici -->
+    <section id="Contact" class="section">
+        <h2>Contactez-moi</h2>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      
+        <div class="contact-section"> <!-- Nouveau conteneur -->
+      
+          <div class="form-container">
+            <div class="icon-container">
+                <img src="../images/Zoho-Mail-Symbole.jpg" alt="mail icon" class="mail-icon" width="100" height="50">
+                <div class="email-text">
+                    <span class="email-address">lagbomedji04@gmail.com</span>
+                </div>
+            </div>
+      
+            <form method="POST" action="/rep.php">
+                <input id="name" type="text" placeholder="Nom *" name="page_name" required />
+                
+                <input id="last_name" type="text" placeholder="Prénom *" name="last_name" required />
+                
+                <input id="mail" type="text" placeholder="Email *" name="Email" required />
+                
+                <textarea id="message" name="message" rows="4" placeholder="Message *" required></textarea>
+                
+                <input type="submit" value="Envoyer" />
+              </form>
+          </div>
+      
+          <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.7435266734037!2d2.649358077459986!3d48.844030601715474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6054e9871c4d9%3A0xab780393a99c100!2s5%20Prom.%20de%20la%20Source%2C%2077200%20Torcy!5e0!3m2!1sfr!2sfr!4v1746263990376!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> " 
+            </iframe>
+          </div>
+      
+        </div> <!-- Fin contact-section -->
+      
+        
+    </section>
+
+    <footer class="footer">
+        <span>Amélé Sandrine</span>
+        <span>2024 Tous droits résevés</span>
+      </footer>
+      
+</main>
+
+
+
+
+
+<script src="./script.js"></script>
+    <footer class="footer"> 
+        <span>Amélé Sandrine</span>
+        <span> 2024 Tous droits résevés</span>
+    </footer>
+        </section>
     </main>
+
+
+
+    <script>
+        const sections = document.querySelectorAll('.scroll-section');
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+    
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+      
+    
+<script src="./script.js"></script>
+
+
 
     <script>
         const toggleBtn = document.querySelector('.toggle-btn');
@@ -216,58 +294,7 @@
         setInterval(updateDateTime, 60000);
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-
-    <div class="form-container">
-        <div class="icon-container">
-            <img src="../images/Zoho-Mail-Symbole.jpg" alt="mail icon" class="mail-icon"  width="100" height="50" >
         
-            <div class="email-text">
-                <span class="email-label">Adresse mail </span>
-                <span class="email-address">lagbomedji04@gmail.com</span>
-            </div>
-           
-
-
-            <img src="../images/icone-de-navigation.jpg" alt="icône-plan"  class="icône-plan"  width="70" height="70">
-        </div>
         
-        <form method="POST" action="/rep.php">
-            
-            <input id="name" type="text"  placeholder="Nom *" name="page_name" required/>
-
-            <br>
-
-            <label for="Prenom"></label>
-            <input id="last_name" type="text" placeholder="Prenom*" name="last_name"  required />
-
-            <br>
-
-            <label for="Email"></label>
-            <input id="mail" type="text"  placeholder="Email*" name="Email" required/>
-
-            <label for="message"></label>
-            <textarea id="message" name="message"  rows="4" cols="50" placeholder="message*" required></textarea>
-            
-            <br>
-            <br>
-            
-            <input type="submit" value="Envoyer" />
-        </form>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.743764201481!2d2.6493560770248084!3d48.84402607133015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6054e9841db35%3A0x33a176cad085d334!2s5%20Prom.%20de%20la%20Source%2C%2077200%20Torcy!5e0!3m2!1sfr!2sfr!4v1728048462755!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    
-    </div>
-    
-
-    <footer class="footer"> 
-        <span>Amélé Sandrine</span>
-        <span> 2024 Tous droits résevés</span>
-    </footer>
 </body>
-
-</body>
-</html>
+</html> 

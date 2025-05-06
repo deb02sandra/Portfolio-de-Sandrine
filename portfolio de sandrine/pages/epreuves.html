@@ -137,56 +137,65 @@
             margin-left: var(--closed-width);
         }
     </style>
-</head>
-<body>
-    <nav class="sidebar">
-        <div class="user-info">
-            <h3>Amélé Sandrine</h3>
-            <div class="datetime" id="datetime"></div>
-        </div>
-        <button class="toggle-btn">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <a href="accueil.html" class="menu-item">
-            <i class="fas fa-home"></i>
-            <span class="menu-text">Accueil</span>
-        </a>
-        <a href="Profil.html" class="menu-item">
-            <i class="fas fa-user"></i>
-            <span class="menu-text">Profil</span>
-        </a>
-        
-        <a href="stage" class="menu-item">
-            <i class="fas fa-briefcase"></i>
-            <span class="menu-text">Stages</span>
-        </a>
-        <a href="competances.html" class="menu-item">
-            <i class="fas fa-laptop-code"></i>
-            <span class="menu-text">Compétences</span>
-        </a>
-        <a href="projets.html" class="menu-item">
-            <i class="fas fa-code"></i>
-            <span class="menu-text">Projets</span>
-        </a>
-        <a href="btssio.html" class="menu-item">
-            <i class="fas fa-award"></i>
-            <span class="menu-text">BTS SIO</span>
-        </a>
-        <a href="epreuves.html" class="menu-item">
-            <i class="fas fa-tasks"></i>
-            <span class="menu-text">Épreuves</span>
-        </a>
-        <a href="contact.html" class="menu-item">
-            <i class="fas fa-envelope"></i>
-            <span class="menu-text">Contact</span>
-        </a>
-    </nav>
+
+
+
 
     <main>
-        <h1>Mon Portfolio BTS SIO</h1>
-        <!-- Votre contenu ici -->
-    </main>
+        <section class="section">
+            <h2>Projets</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="../images/img VTP.png" alt="Installation IoT">
+                    <h3>Mise en place du protocole VTP</h3>
+                    <a href="../documents/1_mise en place de VTP.pdf" target="_blank">Voir le document</a>
+                </div>
+    
+                <div class="card">
+                    <img src="../images/img hsrp.png" alt="audit">
+                    <h3>Mise en place du protocole HSRP</h3>
+                    <a href="../documents/1_Projet_mise_en_place_hsrp.pdf" target="_blank">Voir le document</a>
+                </div>
+    
+                <div class="card">
+                    <img src="../images/wind2022.png" alt="audit">
+                    <h3>Installation du serveur Windows 2022</h3>
+                    <a href="../documents/5_Installation windows server 2022.pdf" target="_blank">Voir le document</a>
+                </div>
+    
+                <div class="card">
+                    <img src="../images/img NAT.png" alt="audit">
+                    <h3>Mise en place NAT</h3>
+                    <a href="../documents/2_mise en place de NAT.pdf" target="_blank">Voir le document</a>
+                </div>
+    
+                <div class="card">
+                    <img src="../images/imgdhcp.png" alt="audit">
+                    <h3>Mise en place d'un serveur DHCP4</h3>
+                    <a href="../documents/3_installation serveur DHCP.pdf" target="_blank">Voir le document</a>
+                </div>
+                <div class="card">
+                    <img src="../images/img VPN.png" alt="audit">
+                    <h3>Mise en place d'un VPN</h3>
+                    <a href="../documents/6installation serveur web Linux.pdf" target="_blank">Voir le document</a>
+                </div>
+                <div class="card">
+                    <img src="../images/install-heartbeat.jpg" alt="audit">
+                    <h3>Mise en place d'un VPN</h3>
+                    <a href="../documents/HEARTBEAT.pdf" target="_blank">Voir le document</a>
+                </div>
+                <div class="card">
+                        <img src="../images/drbd.png" alt="audit">
+                        <h3>Mise en place d'un VPN</h3>
+                        <a href="../documents/mise en place DRBD.pdf" target="_blank">Voir le document</a>
+                </div>
+            </div>
+        </section>
+       
+      </main>
 
+
+    
     <script>
         const toggleBtn = document.querySelector('.toggle-btn');
         const sidebar = document.querySelector('.sidebar');
@@ -216,6 +225,48 @@
         setInterval(updateDateTime, 60000);
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<main>
+    
+
+    <section class="section">
+        <h2>Certifications</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="../images/1_Introduction_to_Cybersecurity_Badge20241116-25-vor7zh_page-0001.jpg" alt="certif">
+                <h3>Certificat Introduction à la cybersécurité</h3>
+                <a href="../documents/certif/1_Introduction_to_Cybersecurity_Badge20241116-25-vor7zh.pdf" target="_blank">Voir le document</a>
+            </div>
+
+            <div class="card">
+                <img src="../images/2_Networking_Basics_Badge20241205-27-le6i4b_page-0001.jpg" alt="certif">
+                <h3>Certificat Introduction au Réseau Cisco</h3>
+                <a href="../documents/certif/2_Networking_Basics_Badge20241205-27-le6i4b.pdf" target="_blank">Voir le document</a>
+            </div>
+
+            <div class="card">
+                <img src="../images/3_Introduction_to_IoT_Badge20241203-25-54nynf_page-0001.jpg" alt="certif">
+                <h3>Certificat Introduction à l'IoT</h3>
+                <a href="../documents/certif/3_Introduction_to_IoT_Badge20241203-25-54nynf.pdf" target="_blank">Voir le document</a>
+            </div>
+
+            <div class="card">
+                <img src="../images/4_Digital_Awareness_certificate_lagbomedji04-gmail-com_5bb9c5ce-554c-493c-897a-7d22d1c522d1_page-0001.jpg" alt="certif">
+                <h3>Certificat Digital Awareness</h3>
+                <a href="../documents/certif/4_Digital_Awareness_certificate_lagbomedji04-gmail-com_5bb9c5ce-554c-493c-897a-7d22d1c522d1.pdf" target="_blank">Voir le document</a>
+            </div>
+
+            <div class="card">
+                <img src="../images/5_EnglishforIT1Update20250215-26-tuco43_page-0001 (1).jpg" alt="certif">
+                <h3>Certificat English for IT</h3>
+                <a href="../documents/certif/5_EnglishforIT1Update20250215-26-tuco43.pdf" target="_blank">Voir le document</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+</main>
+    
+
 </body>
 </html>
