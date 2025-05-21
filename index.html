@@ -149,7 +149,7 @@
           <div class="datetime" id="datetime"></div>
         </div>
       
-        <a href="accueil.html" class="menu-item">
+        <a href="index.html" class="menu-item">
           <i class='bx bx-home'></i>
           <span class="link-text">Accueil</span>
         </a>
@@ -159,107 +159,127 @@
           <span class="link-text">Épreuves</span>
         </div>
       
-        <a href="parcours.html" class="menu-item">
+        <a href="pages/parcours.html" class="menu-item">
           <i class='bx bx-user'></i>
           <span class="link-text">Parcours</span>
         </a>
       
-        <a href="contact.html" class="menu-item">
+        <a href="pages/contact.html" class="menu-item">
           <i class='bx bx-id-card'></i>
           <span class="link-text">Contact</span>
         </a>
-      </nav>
+    </nav>
       
     
       <!-- Ton contenu principal -->
-      <main class="main-content">
-        <div class="hero-section">
-            <div class="hero-image">
-                <img src="images/Capture_d_écran_2025-05-05_162324-removebg-preview.png" alt="">
+    <main class="main-content">
+        <div class="full-width-background"> <!-- Nouveau conteneur de fond -->
+            <div class="content-wrapper">
+                <div class="hero-section">
+            <!-- Bloc texte à gauche -->
+                    <div class="hero-content">
+                        <p>
+                            <span class="typed-text">Bonjour, bienvenue sur mon portfolio.</span>
+                            <br>
+                            <span class="static-text"> Je suis AGBOMEDJI Amélé Sandrine, étudiante en deuxième année de BTS SIO option SISR.</span>
+                        </p>
+                    </div>
+                
+            
+
+    <!-- Image à droite -->
+                    <div class="hero-image">
+                        <img src="images/Capture_d_écran_2025-05-05_162324-removebg-preview.png" alt="Travail sur ordinateur">
+                    </div>
+                </div>
             </div>
 
         </div>
-        <p>Bonjour
-            Bienvenue sur mon portfolio
-            je suis AGBOMEDJI Amélé Sandrine étudiante en deuxième année BTS SIO option SISR (Solutions d'infrastructure, systèmes et réseaux)</p>
-
-      </main>
-    </nav>
+    </main>
     <!-- Ton contenu principal -->
 
-  
-
-    <!-- Le reste de votre code HTML... -->
-    
-    <!--div class="hero-content">
-        <section class="hero">
-            <h1 class="hero-text">Bonjour, Bienvenue sur mon portfolio...</h1>
-        </section>
-    </div-->
-
-    <main>
-
-        <!--section >
-            <div class="hero-content">
-        <section class="hero">
-            <h1 class="hero-text">Bonjour, Bienvenue sur mon portfolio...</h1>
-        </section>
-            </div>
-        </section-->
-
         
-        
+    <main>    
       
         <section id="missionsE5" class="section">
             <h2>Missions_E5</h2>
+
             
             <div class="cards-container">
                 <div class="card">
-                    <img src="images/img VTP.png" alt="Installation IoT">
-                    <h3>Mise en place du protocole VTP</h3>
-                    <a href="portfolio_de_sandrine/documents/1_mise_en_place_de_vtp.pdf" target="_blank">Voir le document</a>
+                    <a href="documents/1_mise_en_place_de_vtp.pdf" target="_blank">
+                        <img src="images/vtp.png" alt="Installation VTP" class="image-carte"/>
+                    </a>
                 </div>
     
                 <div class="card">
-                    <img src="images/img hsrp.png" alt="audit">
-                    <h3>Mise en place du protocole HSRP</h3>
-                    <a href="documents/2_mise_en_place_de_nat.pdf" target="_blank">Voir le document</a>
+                    <a href="documents/2_mise_en_place_de_nat.pdf" target="_blank">
+                        <img src="images/routeur-cisco-1921-adsl2-b.webp" alt="Configuration_NAT" class="image-carte">
+                    </a>
                 </div>
     
                 <div class="card">
-                    <img src="images/wind2022.png" alt="audit">
-                    <h3>Installation du serveur Windows 2022</h3>
-                    <a href="documents/5_Projet_mise_en_place_hsrp.pdf" target="_blank">Voir le document</a>
+                    <a href="documents/5_projet_mise_en_place_hsrp.pdf" target="_blank">
+                        <img src="images/hsrp.png" alt="Document_mise_en_place_HSRP" class="image-carte"> 
+                    </a>
                 </div>
     
-                <div class="card">
-                    <img src="../images/img NAT.png" alt="audit">
-                    <h3>Mise en place NAT</h3>
-                    <a href="documents/9_Mise_en_place_de_routage_statique.pdf" target="_blank">Voir le document</a>
+                <div class="card">                                  
+                    <a href="documents/9_Mise_en_place_de_routage_statique.pdf" target="_blank">
+                        <img src="images/routeur-cisco-1921-adsl2-b.webp" alt="Document_de_mise_en_place_de_route_statique" class="image-carte" >
+                    </a>
                 </div>
     
-                <div class="card">
-                    <img src="images/imgdhcp.png" alt="audit">
-                    <h3>Mise en place d'un serveur DHCP4</h3>
-                    <a href="documents/3_installation_serveur_dhcp.pdf" target="_blank">Voir le document</a>
+                <div class="card">                                   
+                    <a href="documents/3_installation_serveur_dhcp.pdf" target="_blank">
+                        <img src="images/imgdhcp.png" alt="audit" class="image-carte">
+                    </a>
+                </div>
+                <div class="card">                   
+                    <a href="documents/4_installation_windows_server_2022.pdf" target="_blank">
+                        <img src="images/wind2022.png" alt="audit" class="image-carte">
+                    </a>
+                </div>
+                <div class="card">                                      
+                    <a href="documents/8_installation_bind9.pdf" target="_blank">
+                        <img src="images/bind db.png" alt="audit" class="image-carte">
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="images/img VPN.png" alt="audit">
-                    <h3>Mise en place d'un VPN</h3>
-                    <a href="documents/8_installation_bind9.pdf" target="_blank">Voir le document</a>
+                    <img src="images/install-heartbeat.jpg" alt="audit" class="image-carte">                  
+                    <a href="documents/12_HEARTBEAT.pdf" target="_blank"></a>
                 </div>
+
                 <div class="card">
-                    <img src="images/install-heartbeat.jpg" alt="audit">
-                    <h3>Mise en place d'un VPN</h3>
-                    <a href="documents/HEARTBEAT.pdf" target="_blank">Voir le document</a>
+                    <img src="images/GLPI.png" alt="audit">
+                    <a href="documents/7_documentation-installation_glpi_sur_debian.pdf" target="_blank"></a>
                 </div>
+
+                <div class="card">
+                    <img src="images/server_apache.png" alt="audit">                   
+                    <a href="documents/6_installation_serveur_web_linux.pdf" target="_blank"></a>
+                </div>
+
+                 <div class="card">
+                        <img src="images/ftp.png" alt="audit">
+                        <a href="documents/11_configuration_serveur_ftp.pdf" target="_blank"></a>
+                </div>
+
                 <div class="card">
                         <img src="images/drbd.png" alt="audit">
-                        <h3>Mise en place d'un VPN</h3>
-                        <a href="documents/mise en place DRBD.pdf" target="_blank">Voir le document</a>
+                        <a href="documents/10_mise_en_place_DRBD.pdf" target="_blank"></a>
                 </div>
+
+                
             </div>
-            <h3>Certifications</h3>
+
+                 
+            </div>
+        </section>
+        
+            
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
 
             <div class="cards-container">
                 <div class="card">
@@ -291,16 +311,114 @@
                     <h3>Certificat English for IT</h3>
                     <a href="documents/certif/5_EnglishforIT1Update20250215-26-tuco43.pdf" target="_blank">Voir le document</a>
                 </div>
+
+                <div class="card">
+                    <img src="images/6_Création de contenue nimerique_page-0001.jpg" alt="certif">
+                    <h3>Création de contenue nimerique</h3>
+                    <a href="documents/certif/6_Création de contenue nimerique.pdf" target="_blank">Voir le document</a>
+                </div>
+                
+                
+                <div class="card">
+                    <img src="images/7_ certif Docker_page-0001.jpg" alt="certif">
+                    <h3>Dockering</h3>
+                    <a href="documents/certif/7_ certif Docker.pdf" target="_blank">Voir le document</a>
+                </div>
             </div>
         </section>
-        <br>
-        <br>
+        
 
 
       
         <section id="Missions_E6" class="section">
-            <h2>Missions_E6</h2>
+            <h2>Fiches de situation Missions_E6</h2>
+
+            <div class="cards-container">
+                <div class="card">
+                    <a href="documents/7- Annexes 7 - Epreuve E6 - BTS SIO 2025 Amélé Sandrin-1-2 (2).pdf" target="_blank">
+                        <img src="images/VTP_m6.png" alt="Installation VTP" class="image-carte"/>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="documents/7- Annexes 7 - Epreuve E6 - BTS SIO 2025 Amélé Sandrin-3-4 (2).pdf" target="_blank">
+                        <img src="images/GLPI_m6.png" alt="Installation VTP" class="image-carte"/>
+                    </a>
+                </div>
+
+                  <div class="card">                 
+                    <a href="documents/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese Amélé Sandrine.pdf" target="_blank">
+                        <img src="images/tableau_de_synthese.png" alt="certif">
+
+                    </a>
+                    
+                </div>
+            
+            </div>
+
+                
+        
         </section>
+
+
+        <!--page parcours-->
+
+        <section id="parcours" class="experience-section">
+            <h2>EXPÉRIENCES PROFESSIONNELLES</h2>
+            <div class="timeline">
+                <div class="timeline-dot"></div> 
+                <div class="timeline-item left">                                     
+                    <div class="timeline-content">
+                        <h3>2025 - Technicienne support informatique (stage) - Ceffage, Paris (5 semaines)</h3>
+                        <ul>
+                            <li>Configuration de la téléphonie IP (3CX) et administration des comptes via Zoho CRM</li>
+                            <li>Déploiement et maintenance du parc informatique (PC, imprimantes, réseau)</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                               
+                <div class="timeline-item right"> 
+                    <div class="timeline-dot"></div>               
+                    <div class="timeline-content">
+                        <h3>2024 - Animatrice de site (bénévolat) – Regards Solidaires, Strasbourg</h3>
+                        <a href="documents/Présentation Association_Regards_Solidaire.pdf">Mon engagement aux côtés de l'association Association Regards Solidaires</a>
+                        <ul>
+                            Publication de contenus web, gestion de la plateforme, animation communautaire
+                        </ul>
+                        
+                    </div>
+                </div>  
+
+                <div class="timeline-dot"></div> 
+                <div class="timeline-item left">                                                                                                         
+                    <div class="timeline-content">                      
+                            <h3>2024 - Technicienne réseaux (stage) - IFIDE Sup-Formation, Strasbourg (5 semaines)</h3>
+                            <a href="documents/Présentation de mon stage.pdf" target="_blank">Voir mon rapport</a>
+                        <ul>
+                            <li>Gestion de parc informatique via GLPI</li>
+                            <li>Audit de câblage : évaluation de la capacité et de la conformité des installations</li>
+                        </ul>
+                    </div>                  
+                </div>
+
+                               
+                <div class="timeline-item right"> 
+                    <div class="timeline-dot"></div>               
+                    <div class="timeline-content">
+                        <h3>Retrouvez ici mon CV</h3>
+                        <a href="documents/curriculum vitae_Amélé_Sandrine.pdf" target="_blank">Voir le document</a>
+                        
+                    </div>
+                </div>  
+
+
+
+
+            </div>
+            
+        </section>
+
 
         <section id="Contact" class="section">
             <h2>Contactez-moi</h2>
@@ -336,14 +454,18 @@
               </div>
           
             </div> <!-- Fin contact-section -->
-          
-            
-        </section>
 
-        <footer class="footer">
+             <footer class="footer">
             <span>Amélé Sandrine</span>
             <span>2024 Tous droits résevés</span>
           </footer>
+          
+            
+
+        </section>
+
+
+       
           
     </main>
 
@@ -453,7 +575,35 @@
         setInterval(updateDateTime, 60000);
     </script>
 
-        
+    <script>
+        // Effet de fondu à l'entrée de la page
+        document.body.style.opacity = 0;
+        window.addEventListener("load", () => {
+            document.body.style.transition = "opacity 0.8s ease-in-out";
+            document.body.style.opacity = 1;
+        });
+
+        // Effet de fondu à la sortie
+        document.querySelectorAll("a").forEach(link => {
+            if (link.getAttribute("target") !== "_blank" && link.href) {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const url = this.href;
+                    document.body.style.opacity = 0;
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 400); // correspond à la transition
+                });
+            }
+        });
+    </script>
+
+
+
+
+
+    
+
         
 </body>
 

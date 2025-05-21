@@ -1,13 +1,123 @@
+:root {
+  --max-content-width: 1200px;
+}
+
+.content-wrapper {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
 html {
     scroll-behavior: smooth;
-  }
+      box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
   
+  
+  body {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    /* Garantir la largeur totale */
+   overflow-x: hidden;
+   width: 100%;
+
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+  main {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
   .section {
     height: 100vh;
     padding: 80px 20px;
-    background: #f1f5f9;
+      padding: 100px 20px; /* Augmentation de l'espace interne */
+    margin: 50px 0; /* Espacement externe haut/bas */
   }
-  
+
+  .section + .section {
+    margin-top: 80px; /* Espacement entre chaque section */
+}
+
+/* Pour les sections spécifiques */
+#missionsE5, 
+#Missions_E6, 
+.experience-section, 
+#Contact {
+    margin: 70px 0;
+    padding: 90px 20px;
+}
+
+/* Ordonner les sections */
+#missionsE5 { order: 1; }
+#certifications { order: 2; } /* Ajoutez cet ID */
+#Missions_E6 { order: 3; }
+#Contact { order: 5; }
+#parcours { order: 4; }
+
+/* Conteneur parent */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Espacement entre sections */
+.section {
+    margin: 80px 0;
+    padding: 40px 20px;
+}
+
+/* Séparation visuelle */
+#certifications {
+    padding-top: 60px;
+    margin-top: 100px;
+}
+
+#Missions_E6 {
+    margin-top: 120px;
+}
+
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 15px;
+        margin: 30px 0;
+    }
+    
+    .section + .section {
+        margin-top: 50px;
+    }
+}
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
 
 
 #date-time {
@@ -53,7 +163,12 @@ p {
     height: 100vh;
     transition: width 0.3s ease;
     overflow: hidden;
-  }
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(0); /* Force l'alignement au bord gauche */
+}
+  
   
   .sidebar.collapsed {
     width: 60px;
@@ -84,14 +199,26 @@ p {
     transition: margin-left 0.3s ease;
   }*/
 
-  .main-content {
-    margin-left: var(--sidebar-width);
-    background: linear-gradient(to bottom right, #b388f6, #5ac8fa);
-    min-height: 100vh;
-    padding: 2rem;
-    transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+/* Ajuster le contenu principal */
+.main-content {
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  overflow: hidden;
+  padding: 0;
 }
 
+.full-width-background {
+   position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 20px 0;
+  background: linear-gradient(to bottom right, #b388f6, #5ac8fa);
+  min-height: 100vh;
+}
     .sidebar.closed + .main-content {
     margin-left: var(--closed-width);
 }
@@ -118,77 +245,139 @@ p {
 }*/
 
 
-.main-content.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* plein écran */
-    background: linear-gradient(to bottom right, #b388f6, #5ac8fa);
-    text-align: center;
-    animation: fadeInUp 1.5s ease-out;
+/* SECTION PRINCIPALE : avec fond dégradé propre */
+/* Réorganiser la section hero */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 70vh; /* Réduire si besoin */
+
+}
+
+
+/* TEXTE À GAUCHE */
+.hero-content {
+  flex: 1;
+  text-align: left;
+  max-width: 600px;
+  margin-right: 600px; /* Espace pour l'image */
+  margin-top: 100px;
+  padding: 0px 10px; /* Espacement interne */
+
+}
+
+/* Conteneur du texte global */
+.hero-content p {
+  font-size: 1.5rem; /* Taille adaptative */
+  line-height: 1.3;
+  margin: 0;
+  padding-right: 20px;
+  margin-top: -20px;
+}
+
+/* Style de l'image */
+.hero-image {
+  flex: 0 0 500px; /* 0 0 = ne pas rétrécir/étirer */
+  position: relative;
+  margin-top: -900px;
+  margin-left: auto ; /* Pousse l'image à droite */
+}
+
+
+.hero-section {
+    flex-direction: column;
+    padding: 40px 15px;
   }
   
-  .hero-content p {
-    font-size: 1.5em;
-    max-width: 700px;
-    line-height: 1.6;
-    color: #000;
-    animation: fadeInUp 2s ease-out;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-  }
-  /* Animation */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  
-  
-  .hero {
-    position: relative;
-    height: 100vh;    
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hero-content {
-    text-align: center;
-    z-index: 2;
-    color: #000; /* texte noir pour une image éclaircie */
-  }
-  
-  .hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    animation: fadeInUp 1.5s ease-in-out;
-  }
-  
-  .hero-content p {
-    font-size: 1.5em;
-    opacity: 0.9;
-    animation: fadeInUp 2s ease-in-out;
-  }
-  
+/* Image */
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 800px;
+}
+
+
+/* Phrase AVEC effet machine à écrire */
+.typed-text {
+  display: inline-block;
+  white-space: nowrap; /* Pas de retour à la ligne */
+  overflow: hidden; /* Cache ce qui dépasse */
+  border-right: 2px solid black; /* Curseur */
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Texte affiché normalement */
+.static-text {
+  display: inline;
+}
+
+/* ANIMATION écriture */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ANIMATION du curseur clignotant */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* IMAGE À DROITE */
+
+
+
+
+/* BLOBS DÉCORATIFS EN FOND */
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #ffffff30; /* Blanc translucide */
+  z-index: 0;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  pointer-events: none;
+}
+
+/* Blob haut gauche */
+.hero-section::before {
+  top: -60px;
+  left: -60px;
+}
+
+/* Blob bas droit */
+.hero-section::after {
+  bottom: -60px;
+  right: -60px;
+  transform: rotate(180deg);
+}
+
+
 
 /*fin page acceuil*/
+
+
+
+
 
 
 
 /*debut page contact*/
 
 
-
+.map iframe {
+  max-width: 100%; /* Responsive */
+  height: 400px; /* Hauteur fixe */
+}
   
   .mail-icon {
     width: 40px;  /* taille légèrement réduite pour un bon alignement */
@@ -213,13 +402,25 @@ p {
 
 
 .contact-section {
-    display: flex;
-    justify-content: center;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
     align-items: flex-start; /* permet d'aligner le haut de chaque élément */
     gap: 50px; /* espace entre la carte et le formulaire */
     flex-wrap: wrap;
     margin-top: 50px;
   }
+
+
+  .container {
+    width: 100%;
+    max-width: 1200px; /* ou 100%, selon ton besoin */
+    margin: 0 auto; /* centre le contenu */
+    padding: 0 20px; /* un peu de marge sur les côtés */
+    box-sizing: border-box;
+}
+
   
   .form-container {
     padding: 30px;
@@ -227,12 +428,12 @@ p {
     max-width: 500px;
     min-width: 300px;
     flex: 1;
-    background-color: #fff;
+    /*background-color: #fff;*/
   }
   
   .map {
-    max-width: 600px;
-    flex: 1;
+    max-width: 600%;
+    flex: 5px;
     text-align: center;
   }
 
@@ -276,15 +477,22 @@ form textarea {
 }
 
 form input[type="submit"] {
+  width: 150px;         /* ✅ Diminue la largeur du bouton */
+  padding: 10px;        /* ✅ Taille intérieure du bouton */
+  margin: 0 auto;       /* ✅ Centre horizontalement */
+  display: block;       /* ✅ Nécessaire pour que le centrage fonctionne */
   background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
+
+
+/* Effet hover sur le bouton */
 form input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #023469;
 }
 
  
@@ -322,10 +530,10 @@ form input[type="submit"]:hover {
 
 
 
-label{
+/*label{
     display: block;
-    margin-bottom: 50px;
-}
+    margin-bottom: 20px;
+}*/
 
 input[type="text"],
 textarea {
@@ -333,30 +541,23 @@ textarea {
     padding: 20px;
 }
 
-input[type="submit"]{
+/*input[type="submit"]{
     background-color: gray;
     cursor: pointer;
     font-size: 18px;
 }
 input[type="submit"]:hover{
     background-color: chocolate;
-}
+}*/
 
 
 @media (max-width: 768px) {
-    .form-container {
-        margin: 0 auto;
-        max-width: 90%;
-    }
-    .map {
-        margin-left: 0;
-        margin-top: 20px;
-    }
+  .full-width-background {
+    margin-left: 0;
+    left: 0;
+    right: 0;
+  }
 }
-
-
-
-
 /* Section générale */
 .section {
     text-align: center;
@@ -365,62 +566,55 @@ input[type="submit"]:hover{
 
 /* Conteneur des cartes */
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centrer les lignes */
+  gap: 30px; /* espace entre les cartes */
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Plus responsive */
+  padding: 20px; /* Réduire l'espacement */
 }
 
 /* Carte individuelle */
 .card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 280px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    text-align: center;
-    padding: 15px;
+  flex: 0 1 calc(25% - 30px); /* 4 cartes par ligne, moins l'espacement */
+  max-width: 290px;
+  background: transparent;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Image dans la carte */
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+.card img,
+.image-carte {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
 }
 
-/* Titre de la carte */
-.card h3 {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-/* Lien */
+/* Lien dans la carte */
 .card a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: rgb(72, 72, 173);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
 }
 
-.card a:hover {
-    background-color: rgb(230, 230, 241);
-}
-
-/* Espacement entre les sections */
+/* Espacement entre sections si besoin */
 .section + .section {
-    margin-top: 40px;
+  margin-top: 50px;
 }
+
 /*fin de page DOCUMENT*/
 
 
@@ -449,3 +643,157 @@ p{
   
 
 /* Arc-en-ciel coin haut gauche */
+
+
+
+/*PAge parcours*/
+
+.experience-section {
+  padding: 100px 100px;
+  position: relative;
+}
+
+.experience-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 60px;
+  color: #005480;
+}
+
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0  ;
+  width: 2px;
+  background-color: #005480;
+  height: 100%;
+}
+
+/* Items */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  padding: 8px 40px;
+}
+
+/*.timeline-content {
+  padding: 0px; /* confortable 
+  width: 100%; /* très important 
+  /*max-width: 900px; /* ✅ contrôle une largeur lisible 
+  /*width: calc(50% - 30px); /* Occuper la moitié de l'espace moins la marge et le point 
+  max-width: 800px;
+}*/
+
+.timeline-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  max-width: 900px;
+}
+
+.timeline-item, 
+.timeline-content li,
+.timeline-item.right {
+  margin-bottom: 10px;
+  white-space: normal;   /* autorise les retours à la ligne si besoin */
+  line-height: 1.6;      /* espace vertical plus agréable */
+  max-width: 900px;
+  width: 800px;
+}
+
+.timeline-item,
+.timeline-content li,
+.timeline-item.left {
+  margin-bottom: 10px;
+  white-space: normal;   /* autorise les retours à la ligne si besoin */
+  line-height: 1.6;      /* espace vertical plus agréable */
+  max-width: 900px;
+  width: 600px;
+}
+
+.timeline-item.timeline-item.left {
+  right: 50%;
+  display: flex;
+  justify-content: flex-end; /* contenu vers la gauche */
+  text-align: left;
+  transform: translateX(-700px); /* Permet de décaler le contenu à gauche */
+}
+
+.timeline-item,
+.timeline-item.right {
+  right: 50%;
+  display: flex;
+  justify-content: flex-start; /* contenu vers la gauche */
+  text-align: right;
+}
+
+
+/* Points ronds sur la ligne */
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #005480;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px; /* alignement vertical par rapport au contenu */
+  left: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.timeline-dot-a {
+  width: 14px;
+  height: 14px;
+  background-color: #005480;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px; /* alignement vertical par rapport au contenu */
+  left: 100%;
+  transform: translate(0%, -0%);
+  z-index: 2;
+  margin-left: 12px;
+}
+
+/* Pour les éléments à droite, replacer le point */
+.timeline-item.right .timeline-dot {
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-item.left .timeline-dot {
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline {
+    left: 50px;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+    padding-left: 60px;
+  }
+
+  .timeline-dot {
+    left: 20px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
