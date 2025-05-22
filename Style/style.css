@@ -328,7 +328,7 @@ p {
 .hero-image {
   flex: 0 0 500px; /* 0 0 = ne pas rétrécir/étirer */
   position: relative;
-  margin-top: -900px;
+  margin-top: -600px;
   margin-left: auto ; /* Pousse l'image à droite */
 }
 
